@@ -1,0 +1,84 @@
+/* =============================================================================
+  VERTICAL ALIGNMENT - USER
+============================================================================= */
+
+.user {
+  display: flex;
+  align-items: center;
+  margin: 0 auto 24px auto;
+  max-width: 960px;
+}
+
+.user:last-child {
+  margin-bottom: 0;
+}
+
+.user__avatar {
+  flex: 0 0 96px;
+  width: 96px;
+  height: 96px;
+  background-color: $color--neutral-xxlight;
+}
+
+.user__description {
+  flex: 1;
+  margin-left: 24px;
+  padding: 12px;
+  border: solid 1px $color--neutral-xxlight;
+}
+
+.user__username {
+  margin: 0 0 12px 0;
+  padding: 0;
+}
+
+.user__excerpt {
+  margin: 0;
+}
+
+/* =============================================================================
+  VERTICAL AND HORIZONTAL CENTERING
+============================================================================= */
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 180px;
+  background-color: $color--neutral-xxlight;
+}
+
+.banner__content {
+  text-align: center;
+}
+
+.banner__title,
+.banner__sub {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+@media all and ( min-width: 480px ) {
+
+  .banner {
+    height: 240px;
+  }
+
+}
+
+@media all and ( min-width: 768px ) {
+
+  .banner {
+    height: 360px;
+  }
+
+}
+
+@media all and ( min-width: 960px ) {
+
+  .banner {
+    height: 480px;
+  }
+
+}

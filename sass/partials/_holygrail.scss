@@ -1,0 +1,68 @@
+/* =============================================================================
+  HOLY GRAIL
+============================================================================= */
+
+.holy-grail {
+  display: flex;
+  flex-direction: column;
+}
+
+.holy-grail__header,
+.holy-grail__footer {
+  flex: 0 0 100%;
+  padding: 12px;
+  background-color: $color--theme;
+  text-align: center;
+}
+
+.holy-grail__header h1,
+.holy-grail__footer small {
+  color: #fff;
+}
+
+.holy-grail__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.holy-grail__sidebar {
+  padding: 12px;
+  background-color: $color--neutral-xxlight;
+}
+
+.holy-grail__sidebar--first {
+  order: 1;
+}
+
+.holy-grail__sidebar--second {
+  order: 3;
+}
+
+.holy-grail__content {
+  order: 2;
+  padding: 12px;
+}
+
+@media all and ( min-width: 720px ) {
+  
+  .holy-grail__body {
+    flex-direction: row;
+  }
+
+  .holy-grail__sidebar {
+    flex: 0 0 180px;
+  }
+
+  .holy-grail__content {
+    flex: 1;
+  }
+
+}
+
+@media all and ( min-width: 960px ) {
+
+  .holy-grail__sidebar {
+    flex: 0 0 240px;
+  }
+
+}

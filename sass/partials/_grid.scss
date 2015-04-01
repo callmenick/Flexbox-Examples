@@ -1,0 +1,42 @@
+/* =============================================================================
+  FLEXBOX GRID
+============================================================================= */
+
+.grid {
+  border: solid 1px $color--neutral-xxlight;
+}
+
+.grid__row {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid__item {
+  flex: 1;
+  padding: 12px;
+  border: solid 1px $color--neutral-xxlight;
+}
+
+@media all and ( min-width: 480px ) {
+
+  .grid__row--sm {
+    flex-direction: row;
+  }
+
+}
+
+@media all and ( min-width: 720px ) {
+
+  .grid__row--md {
+    flex-direction: row;
+  }
+
+}
+
+@media all and ( min-width: 960px ) {
+
+  .grid__row--lg {
+    flex-direction: row;
+  }
+
+}

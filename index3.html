@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Flexbox Examples - Navigation With Search Bar</title>
+  <meta name="description" content="Some flexbox examples.">
+  <link rel="stylesheet" href="css/dist/font-awesome.min.css">
+  <link rel="stylesheet" href="css/dist/common.min.css">
+  <link rel="stylesheet" href="css/dist/component.min.css">
+</head>
+<body>
+  
+<header class="demo-header">
+  <nav class="demo-header-nav">
+    <a href="http://callmenick.com/_development/css-device-mockups/" class="demo-header-nav__link"><i class="fa fa-arrow-left"></i> Previous Demo</a>
+    <a href="http://callmenick.com/post/flexbox-examples" class="demo-header-nav__link">Back To Article <i class="fa fa-star"></i></a>
+  </nav>
+  <div class="container">
+    <h1 class="demo-header__title">Flexbox Examples - Navigation With Search Bar</h1>
+  </div>
+</header>
+
+<main class="demo-content">
+  <div class="container">
+    <nav class="demo-sub-nav">
+      <ul class="demo-sub-nav__items">
+        <li class="demo-sub-nav__item"><a href="index.html" class="demo-sub-nav__link">Simple Grid</a></li>
+        <li class="demo-sub-nav__item"><a href="index2.html" class="demo-sub-nav__link">Holy Grail</a></li>
+        <li class="demo-sub-nav__item active"><a href="index3.html" class="demo-sub-nav__link">Nav w/ Search Bar</a></li>
+        <li class="demo-sub-nav__item"><a href="index4.html" class="demo-sub-nav__link">Vertical Alignment</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <section class="component__section">
+    
+    <nav class="flexy-nav">
+      <button id="flexy-nav__toggle" class="flexy-nav__toggle">Toggle Nav</button>
+      <ul id="flexy-nav__items" class="flexy-nav__items">
+        <li class="flexy-nav__item"><a href="#" class="flexy-nav__link">Item 1</a></li>
+        <li class="flexy-nav__item"><a href="#" class="flexy-nav__link">Item 2</a></li>
+        <li class="flexy-nav__item"><a href="#" class="flexy-nav__link">Item 3</a></li>
+        <li class="flexy-nav__item"><a href="#" class="flexy-nav__link">Item 4</a></li>
+      </ul>
+      <form action="" class="flexy-nav__form">
+        <input class="flexy-nav__search" type="text" placeholder="Type search terms and hit enter...">
+      </form>
+    </nav>
+
+  </section>
+
+</main>
+
+<footer class="demo-footer">
+  <div class="container">
+    <small>&copy; 2015, callmenick.com</small>
+  </div>
+</footer>
+
+<script src="js/carbonad.js"></script>
+
+<script>
+  (function() {
+    var toggle = document.querySelector("#flexy-nav__toggle");
+    var nav = document.querySelector("#flexy-nav__items");
+    toggle.addEventListener("click", function(e) {
+      e.preventDefault();
+      nav.classList.contains("flexy-nav__items--visible") ? nav.classList.remove("flexy-nav__items--visible") : nav.classList.add("flexy-nav__items--visible");
+    });
+  })();
+</script>
+
+</body>
+</html>

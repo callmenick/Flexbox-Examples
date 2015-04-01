@@ -1,0 +1,19 @@
+/* =============================================================================
+  COMPONENT COMMONS
+============================================================================= */
+
+.component__section {
+  margin: 0 24px 48px;
+}
+
+.component__section:last-child {
+  margin-bottom: 0;
+}
+
+.component__sub-title {
+  margin-bottom: 12px;
+  color: $color--neutral-light;
+  font-size: $font-size--large;
+  font-weight: 300;
+  text-align: center;
+}

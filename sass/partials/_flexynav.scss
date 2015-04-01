@@ -1,0 +1,139 @@
+/* =============================================================================
+  FLEX NAVIGATION
+============================================================================= */
+
+/* resets */
+input,
+button {
+  font: inherit;
+  border-radius: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* nav container */
+
+.flexy-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+/* nav links */
+
+.flexy-nav__items {
+  display: none;
+  flex: 1;
+  flex-direction: column;
+  list-style: none;
+  margin: 0 0 4px 0;
+  padding: 4px;
+  text-align: center;
+}
+
+.flexy-nav__items--visible {
+  display: flex;
+}
+
+.flexy-nav__item {
+  background-color: $color--neutral-xxxlight;
+  border-bottom: solid 1px $color--neutral-xxlight;
+}
+
+.flexy-nav__item:last-child {
+  border-bottom: 0;
+}
+
+.flexy-nav__link {
+  padding: 8px;
+  display: block;
+}
+
+/* nav toggle */
+
+.flexy-nav__toggle {
+  margin: 0 0 4px 0;
+  padding: 4px;
+  color: #fff;
+  background-color: $color--theme;
+  border: none;
+}
+
+.flexy-nav__toggle:hover,
+.flexy-nav__toggle:focus {
+  outline: none;
+  background-color: $color--theme-dark;
+}
+
+/* nav form */
+
+.flexy-nav__form {
+  height: 48px;
+}
+
+.flexy-nav__search {
+  display: block;
+  margin: 0;
+  padding: 0 4px;
+  width: 100%;
+  height: 48px;
+  color: $color--neutral;
+  background-color: #fff;
+  border: solid 2px $color--neutral-xxlight;
+}
+
+.flexy-nav__search:focus {
+  outline: none;
+  border: solid 2px $color--neutral;
+}
+
+/* media queries */
+
+@media all and ( min-width: 768px ) {
+
+  .flexy-nav {
+    flex-direction: row;
+  }
+
+  .flexy-nav__items {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    height: 48px;
+  }
+
+  .flexy-nav__item {
+    flex: 1;
+    margin-right: 4px;
+    border-bottom: none;
+  }
+
+  .flexy-nav__link {
+    padding: 0;
+    line-height: 48px;
+  }
+
+  .flexy-nav__toggle {
+    display: none;
+  }
+
+  .flexy-nav__form {
+    flex: none;
+  }
+
+  .flexy-nav__search {
+    width: 240px;
+    transition: width 0.3s;
+  }
+
+  .flexy-nav__search:focus {
+    width: 360px;
+  }
+
+}
